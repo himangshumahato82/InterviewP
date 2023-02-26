@@ -1,4 +1,15 @@
 
+const debounce=(fn,delay)=>{
+   let timeId;
+    return function(){
+      timeId=setTimeout(()=>{
+         fn()
+      },delay)
+   }
+ }
+
+
+
    const Fetch=()=>{
     const movieName =document.getElementById("movie").value 
    fetch(`https://www.omdbapi.com/?apikey=e76d383b&s=${movieName}`)
@@ -34,6 +45,5 @@ data.map((el)=>{
 
 
 
-const data=()=>{
-    Fetch()
-}
+const data=debounce(Fetch,3000)
+

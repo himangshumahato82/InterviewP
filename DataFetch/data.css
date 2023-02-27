@@ -2,8 +2,8 @@ body {
     background-color: #272727;
   }
 #main{
-    border:2px solid teal ;
-    width: 100%;
+    /* border:2px solid teal ; */
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;

@@ -2,7 +2,7 @@ body {
     background-color: #272727;
   }
 #main{
-    /* border:2px solid teal ; */
+    
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -18,8 +18,7 @@ body {
     /* padding-top: 20px; */
     border-radius: 15px;
     margin: auto;
-    /* margin-top: 10px; */
-    /* background-color: #000; */
+   
 }
 #image{
     margin: auto;

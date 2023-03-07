@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Management</title>
+    <style>
+     
+      #create{
+        width: 50%;
+        margin: auto;
+
+      }
+      #create h1{
+        text-align: center;
+      }
+      #create form{
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+        margin: auto;
+        gap: 20px;
+      }
+      table tr th{
+        width: 40%;
+        margin: auto;
+        background-color: Yellow;
+        border: 2px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="create">
+      <h1>Add Stock in Portfolio</h1>
+      <form>
+        <input placeholder="Company Name" id="name" type="text" />
+        <select id="category">
+          <option value="">Stock Category</option>
+          <option value="Large Cap">Large Cap</option>
+          <option value="Mid Cap">Mid Cap</option>
+          <option value="Small Cap">Small Cap</option>
+        </select>
+        <input type="text" id="sector" placeholder="Sector" />
+        <input placeholder="Stock Price" id="price" type="number" />
+        <input placeholder="Quantity" id="quantity" type="number" />
+        <label for="">Add Date:- </label>
+        <input type="date" id="addDate" />
+        <input type="submit" value="Add Stock" />
+      </form>
+    </div>
+    <h1 id="total-price">Total Price:- <span>0</span></h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Stock Name</th>
+          <th>Category</th>
+          <th>Sector</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total Cost</th>
+          <th>Add Date</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+  </body>
+  <script>
+    // Write all necessery JS Here
+    document.querySelector("form").addEventListener("submit", stock)
+
+    var total=0;
+    function stock(){
+      event.preventDefault();
+      var name=document.getElementById("name").value;
+      var category=document.getElementById("category").value;
+      var sector=document.getElementById("sector").value;
+      var price=document.getElementById("price").value;
+      var quantity=document.getElementById("quantity").value;
+    
+      var date=document.getElementById("addDate").value;
+      if(name=="" || category=="" || sector=="" || price=="" || quantity=="" || date=="")
+      {
+        alert("Fill all input fields");
+        return;
+      }
+
+
+      var tr=document.createElement("tr");
+
+
+      var td1=document.createElement("td");
+      td1.textContent=name;
+
+      var td2=document.createElement("td");
+      td2.textContent=category;
+
+      var td3=document.createElement("td");
+      td3.textContent=sector;
+
+      var td4=document.createElement("td");
+      td4.textContent=price;
+
+      var td5=document.createElement("td");
+      td5.textContent=quantity;
+
+      var td6=document.createElement("td");
+      td6.textContent=price*quantity;
+
+      total+=price*quantity;
+      document.querySelector("span").textContent="Total Price:-"+total;
+
+      var td7=document.createElement("td");
+      td7.textContent=date;
+
+      var td8=document.createElement("td");
+      td8.textContent="Delete";
+      td8.addEventListener("click", deleteRow);
+      tr.append(td1,td2,td3,td4,td5,td6,td7,td8);
+      document.querySelector("tbody").append(tr);
+      
+
+      function deleteRow(){
+        event.target.parentNode.remove();
+        total-=price*quantity;
+        document.getElementById("total-price").textContent="Total Price:-"+total;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,11 @@
+#childdiv{
+    display: flex;
+    justify-content:space-evenly;
+    width: 50%;
+}
+#btn1{
+    height: 40px;
+    margin-top: 30px;
+    background-color: brown;
+    color: white;
+}

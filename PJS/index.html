@@ -82,6 +82,8 @@
       var quantity=document.getElementById("quantity").value;
     
       var date=document.getElementById("addDate").value;
+      console.log(a)
+      let a=10;
       if(name=="" || category=="" || sector=="" || price=="" || quantity=="" || date=="")
       {
         alert("Fill all input fields");
@@ -122,7 +124,7 @@
       tr.append(td1,td2,td3,td4,td5,td6,td7,td8);
       document.querySelector("tbody").append(tr);
       
-
+     
       function deleteRow(){
         event.target.parentNode.remove();
         total-=price*quantity;

@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div>
+
+   
     <div style="align-items: center; text-align: center;">
         <input type="text" placeholder="search product here......">
-        <button>Submit</button>
-
-
+        <button onclick="Getdata()" id="btn">Submit</button>
+        <button onclick="Getsortdata()" id="btn1">SortBy Price</button>
     </div>
+      <div id="Product" style="display: grid; grid-template-columns: repeat(3,1fr); width: 600px;">
+
+
+      </div>
+
+</div>
 </body>
 </html>
+
+<script src="index.js"></script>

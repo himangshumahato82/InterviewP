@@ -1,7 +1,10 @@
-document.getElementById("li").addEventListener("click",mouseEnter)
+const line = document.querySelectorAll('li');
+line.forEach((li) => {
+  li.addEventListener('mouseenter', () => {
+    li.classList.add('color');
+  });
 
-
-function mouseEnter(){
-
-
-}
+  li.addEventListener('mouseleave', () => {
+    li.classList.remove('color');
+  });
+});

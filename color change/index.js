@@ -8,26 +8,26 @@ line.forEach((li) => {
     li.classList.remove('color');
   });
 });
-// var arr = [6,2,"d", 4, "r"];
-// var integers = [];
-// var strings = [];
-// var bc=[]
-// for (var i = 0; i < arr.length; i++) {
-//   if (typeof arr[i] === "number") {
-//      integers.push(arr[i]);
+var arr = [6,2,"d", 4, "r"];
+var integers = [];
+var strings = [];
+var bc=[]
+for (var i = 0; i < arr.length; i++) {
+  if (typeof arr[i] === "number") {
+     integers.push(arr[i]);
     
-// }
-//   else {
-//     strings.push(arr[i]);
-//   }
-// }
-// integers.sort(function(a, b) {
-//     return a - b;
-//   });
+}
+  else {
+    strings.push(arr[i]);
+  }
+}
+integers.sort(function(a, b) {
+    return a - b;
+  });
 
-// var newarr=[...integers,...strings]
+var newarr=[...integers,...strings]
 
-// console.log(newarr)
+console.log(newarr)
 
 const myPromise = new Promise((resolve, reject) => {
     // Perform some asynchronous operation

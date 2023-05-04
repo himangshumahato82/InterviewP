@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,tr,th{
+            border: 1px solid teal;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   <form onsubmit="submits(event)"  >
+      <input type="text" placeholder="name" id="name">
+      <input type="text"  placeholder="company Name" id="com">
+      <input type="date" placeholder="Date" id="date">
+      <input type="number" placeholder="Age" id="age" cursors="pointer">
+      <button type="submit">submit</button>
+   </form > 
+    <div >
+        <button onclick="Display()">GetData</button>
+       <table >
+        <thead>
+           
+                <tr>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Date</th>
+                    <th>Age</th>
+                    <th>Delete</th>
+                </tr>
+                
+            
+        </thead>
+         <tbody id="tb">
+           <!-- <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+           </tr> -->
+         </tbody>
+
+       </table>
+
+    </div>
+</body>
+</html>
+<script src="index.js"></script>

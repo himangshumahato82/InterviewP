@@ -31,7 +31,7 @@ function Display(){
     arr.map((el,i)=>{
 
      var tr=document.createElement("tr")
-        // tr.innerText="";
+         tr.innerText="";
      var td1=document.createElement("td")
       td1.innerText=el.name
 

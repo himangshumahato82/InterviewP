@@ -24,12 +24,14 @@ function Display(){
     console.log(arr)
    
     var tbody=document.getElementById("tb")
-    while (tbody.firstChild) {
-            tbody.removeChild(tbody.firstChild);
-          }
+    // while (tbody.firstChild) {
+    //         tbody.removeChild(tbody.firstChild);
+    //       }
+    tbody.innerHTML="";
     arr.map((el,i)=>{
+
      var tr=document.createElement("tr")
-        tr.innerText="";
+        // tr.innerText="";
      var td1=document.createElement("td")
       td1.innerText=el.name
 
@@ -46,7 +48,7 @@ function Display(){
       var td5=document.createElement("td")
        td5.innerText="delete"
       td5.addEventListener("click",()=>{
-        console.log()
+       
         arr.splice(i,1)
         localStorage.setItem("set",JSON.stringify(arr))
        Display()
